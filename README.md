@@ -1,7 +1,7 @@
 # RTR108
 Studiju kurss Datormācība (speckurss) elektroniskā klase
 
-Python nav:
+	Python nav:
 
 	Jākompilē
 	Jāliek ";"
