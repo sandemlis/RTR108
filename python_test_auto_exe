@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+print(vars())
+a=10
+print("%s"%vars())
