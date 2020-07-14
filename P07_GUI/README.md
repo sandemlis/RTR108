@@ -16,6 +16,7 @@ Kā arī uztaisīju, lai viena no pogām būtu divu pogu platumā.
 Pogu atrašanās vieta un izveide tiek veikta ar cikla palīdzību, kas no saraksta nolasa pogas nosaukumu un atrašanās vietu.
 Tādēļ, lai izmainītu pogu atrašanās vietu, jāizmaina ir šajā sarakstā piešķirtās vērtības.
 
+Piemērs:
 >        buttons = {
 >            "7": (0, 0),
 >            "8": (0, 1),
@@ -39,6 +40,7 @@ Tādēļ, lai izmainītu pogu atrašanās vietu, jāizmaina ir šajā sarakstā 
 >            "=": (3, 4),
 >        }
 
+Izmainītais kods:
 >        buttons = {
 >            "C": (0, 0),
 >            "/": (0, 1),
@@ -65,6 +67,7 @@ Tādēļ, lai izmainītu pogu atrašanās vietu, jāizmaina ir šajā sarakstā 
 
 Šajā programmā pogām tiek piešķirts fiksēts izmērs, tāpēc, lai izveidotu pogu kas ir divu pogu platumā, bija nepieciešams ciklā ieviest izņēmumu, kura gadījumā pogai piešķirs citu izmēru
 
+Ciklā ievietotā rindiņa:
 >            if btnText=="0" :
 >                self.buttons[btnText].setFixedSize(85, 40)
 
@@ -72,8 +75,10 @@ Tādēļ, lai izmainītu pogu atrašanās vietu, jāizmaina ir šajā sarakstā 
 
 Pa cik tika izmainīts pogu izkārtojums, jaunais pogu izkārtojums ar piešķirtajiem pogu izmēriem vairs logā nietilpst, tādēļ nepieciešams piešķirt jaunu izmēru.
 
+Piemērs:
 >        self.setFixedSize(235, 235)
 
+Izmainītais kods:
 >        self.setFixedSize(195, 275)
 
 ## Programmas darbība
