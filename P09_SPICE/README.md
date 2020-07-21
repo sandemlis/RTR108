@@ -48,3 +48,23 @@ Tālāk tiks norādīts komandas pielietošanas piemērs, lai šo darbību varē
 "[fails no kura]" norāda shēmas failu, no kura tiks veidots elementu-mezglu saraksts
 
 ### Shēmas simulācijas veikšana
+
+Lai veiktu shēmas simulāciju ir jāpalaiž NGSpice ierakstot 'ngspice' konsolē
+Kad NGSpice ir palaists būs jāieraksta dažas komandas kuras tiks izmantotas, lai iegūtu simulācijas recultātus.
+
+Šīs komandas jāraksta ir šādā secībā, lai veiktu simulāciju
+> source [fails] 
+> tran [solis] [beigas] [sākums]
+
+Komanda 'source' norāda failu, kuram tiks veikta simulācija, šis fails jānorāda "[fails]" vietā.
+Šājā failā, kuru izmantos, lai veiktu simulāciju, ir jābūt mezlu-elementu sarakstam.
+
+Komanda 'tran' veiks simulāciju laika posmā, "[solis]" norāda ik pēc cik ilga laika tiks veikta mērījumu fiksēšana, ["beigas"] norāda beigu laiku, kad beigs veikt mērījumu piefiksēšanu, un ["sākums"] norāda laiku, kurā sākt veikt mērījumu piefiksēšanu
+Norādot laiku, ja netiek norādītas mērvienības, ievadītie cipari tiek uzskatīti kā sekundes, bet ja vēlas norādīt mērīšanas intervālu mazākā diapazonā, piemēram ja ir straujas izmaiņas, būs laiks jānorāda ar mērvienību, piemēram ms, us, utt.
+
+Tālāk norādītās komandas tiek izmantotas, lai izvadītu veikto simulāciju grafikus.
+> plot "[mezgls]"                   vai arī      plot "[mezgls1]" "[mezgls2]"
+> hardcopy [fails kur] "[mezgls]"   vai arī      hardcopy [fails kur] "[mezgls1]" "[mezgls2]"
+
+Komanda plot parādīs uz ekrāna grafiku, bet komanda hardcopy grafiku izvadīs failā.
+
