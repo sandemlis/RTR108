@@ -8,4 +8,4 @@ Diemžēl kāds fails trūka kas bija nepieciešams, lai veiktu šo kompilāciju
 
 Kompilāciju ganjau varētu veikt veiksmīgi, ja tiktu pārtaisīti visi importi, daļa no kuriem netiek izmantoti, jo, lai atvieglotu darbu, biju izmantojis kopiju no ETP veiktajiem darbiem
 
-
+Ber šoreiz tam lieki laika netērēšu, jo kompilāciju veiksmīgi var veikt Overleaf.com mājaslapā.
