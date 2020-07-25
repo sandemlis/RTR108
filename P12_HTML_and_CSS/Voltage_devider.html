@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>P12_HTML_and_CSS</title>
+</head>
+<body>
+
+<center><h1>Sprieguma dalītāja shēmas simulācija</h1></center>
+
+<h2>1 Ievads</h2>
+<p>Šajā nodarbībā (12. nodarbībā) notiks iepriekšējā nodarbībā veidotā <b>LaTeX</b> faila pārveide uz html, kurā tika aprakstītas un ar bildēm papildinātas 9. nodarbībā veiktās
+darbības. <br>
+9. Nodarbībā mēs iemācījāmies ar <b>gEDA</b> programmām veikt vienkāršu shēmu simulāciju. <br>
+Šīs 9. nodarbībā iegūtās zināšanas mēs izmantosim, lai uzrakstītu aprakstu kā veikt simulāciju, kādas darbības jāveic, lai to izdarītu veiksmīgi. <br>
+Shēmas simulācijai veicamās darbības Lai veiktu shēmas simulāciju, tā vispirms ir jauzīmē un jāapstrādā, lai programmās varētu apstrādāt tām piešķirto informāciju. Veicot datu sagatavošanu apstrādei ir jāzin noteiktas
+lietas, lai darbs notiktu veiksmīgi un nebūtu jāsaskaras ar liekām problēmām.</p>
+
+<h2>2 Shēmas zīmēšana, jeb GSchem daļa</h2>
+<p>Sāksm ar shēmas zīmēšanu, šim darbam mēs izmantosim ’gschem’ programmu, to var palaist ierakstot konsolē
+<b>’gschem’</b>.</p>
+<center><img src='https://github.com/sandemlis/RTR108/blob/master/P10_P11_LaTeX/pictures/spice/Logs.PNG?raw=true' width=451 height=375 alt='Shēmas zīmēšanas vides logs'><br><p>1. attēls. Shēmas zīmēšanas vides logs</p></center>
+
+<h3>2.1 Komponenšu izvietošana</h3>
+<p>Vispirms veiksim shēmas zīmēšanu un tikai pēctam veiksim vērtību ievadīšanu. Lai sāktu zīmēt shēmu, mums tajā ir jāievieto komponentes, tās ver atrast zem pogas <b>'Add component'</b>, kas atvērs sarakstu ar daudzām komponentēm. Lai vieglāk būtu atrast komponenti kura mums ir nepieciešama, var izmantot meklētāju jeb filtru <b>'Filter:'</b> tajā ierakstot komponentes nosaukumu angļu valodā.</p>
+<center><img src='https://github.com/sandemlis/RTR108/blob/master/P10_P11_LaTeX/pictures/spice/Components.PNG?raw=true' width=350 alt='Shēmas zīmēšanas vides logs'><br><p>2. attēls. Ikona, lai sāktu izvietot komponents</p></center>
+<center><img src='https://github.com/sandemlis/RTR108/blob/master/P10_P11_LaTeX/pictures/spice/ComponentFilter.PNG?raw=true' width=350 alt='Shēmas zīmēšanas vides logs'><br><p>3. attēls. Komponenšu izvēles logs ar meklētāju</p></center>
+
+<h3>2.2 Komponenšu savienošana</h3>
+<p>Kad komponentes ir izvietotas vēlamajās vietās, tās jāsavieno ar vadiem, jeb šajā gadījumā tie ir iedomāti savienojumi, kuriem nav pretestības. Vadus sāk zīmēt nospiežot uz pogas <b>'Add netsmode'</b>, kas pārslēgs rezīmu lai sāktu zīmēt vadus. Tagad nospiežot jebkurā vietā uz shēmas (sākumpunktā) un pēctam citā (beigu punktā) tiks uzzīmēts vads starp šiem diviem punktiem. Tāpēc, lai savienotu komponentes, kā sākumpunktu izmantosim vienas komponentes kādu no izvadiem un kā beigu punktu kādas citas komponentes kādu no izvadiem.</p>
+<center><img src='https://github.com/sandemlis/RTR108/blob/master/P10_P11_LaTeX/pictures/spice/Netnodes.PNG?raw=true' width=350 alt='Shēmas zīmēšanas vides logs'><br><p>4. attēls. Ikona, lai sāktu zīmēt vadus</p></center>
+
+<center>
+<table>
+  <tr>
+    <th><img src='https://github.com/sandemlis/RTR108/blob/master/P10_P11_LaTeX/pictures/spice/Zimesana.PNG?raw=true' height=500 alt='Shēmas zīmēšanas vides logs'></th>
+    <th><img src='https://github.com/sandemlis/RTR108/blob/master/P10_P11_LaTeX/pictures/spice/ZimesanaPabeigta.PNG?raw=true' height=500 alt='Shēmas zīmēšanas vides logs'></th> 
+  </tr>
+  <tr>
+    <td><center>5. attēls. Zīmēšanas sākums</center></td>
+    <td><center>6. attēls. Pabeigta komponenšu savienošana</center></td>
+  </tr>
+</table>
+</center>
+
+<h3>2.3 Paramatru vērtību piešķiršana</h3>
+<p>Kad shēma ir uzzīmēta, ir nepieciešams norādīt elementu vērtības. Lai to varētu sākt darīt vispirms jāizslēdz vadu zīmēšanas režīms, ja to neizdarīsim, mēģinot atlasīt elementu kuram piešķirsim vērtības, mēs turpinātu zīmēt vadus, ko šobrīd mums īsti vairs nevajag. To var izdarīt ar pogu kuras ikona ir tāda pati, vai līdzīga peles kursoram (uzbraucot uz šīs pogas parādīsies <b>'Select mode'</b>). Tagad kad esam izslēguši vadu zīmēšanas režīmu, varam sākt vērtību piešķiršanu elementiem.</p>
+
+<center><img src='https://github.com/sandemlis/RTR108/blob/master/P10_P11_LaTeX/pictures/spice/Kursors.PNG?raw=true' width=350 alt='Shēmas zīmēšanas vides logs'><br><p>7. attēls. Ikona, lai sāktu izvietot komponents</p></center>
+
+<p>Divreiz noklikšķinot uz elementa atvērsies logs kurā būs redzam dažādi tā raksturojošie parametri. Atribūts <b>'refdes'</b> norāda šī elementa norādīto nosaukumu, nomainot šī atribūta vērtību mēs elementam piešķirsim nausaukumu, kuru mēs pēctam spēsim atpazīt (Piemēram 'V1' - avotam, 'R3' - pretestībai utt.). Diemžēl, mums nav vēl atribūta kurš norāda uz elementa nomināla vērtību, tādēļ to pievienosim. Lai pievienotu nomināla vērtību, atribūtu sarakstā atradīsim atribūtu kurš norāda elementa vērtību <b>'Value'</b> un kad esam atlasījuši šo atribūtu iedosim viņam skaitlisko vērtību, kad tas ir izdarīts nospidīsim <b>'Add'</b> un būsim elementam piešķīruši nepieciešamās vērtības (Sarežģītākiem elementiem varētu būt arī nepieciešams piešķirt vairāk vērtību). To pašu atkārtosim arī citiem elementiem.</p>
+
+<center>
+<table>
+  <tr>
+    <th><img src='https://github.com/sandemlis/RTR108/blob/master/P10_P11_LaTeX/pictures/spice/Parametri.PNG?raw=true' height=250 alt='Shēmas zīmēšanas vides logs'></th>
+    <th><img src='https://github.com/sandemlis/RTR108/blob/master/P10_P11_LaTeX/pictures/spice/ParametrVertiba.PNG?raw=true' height=250 alt='Shēmas zīmēšanas vides logs'></th> 
+  </tr>
+  <tr>
+    <td><center>8. attēls. Komponentes atribūti</center></td>
+    <td><center>9. attēls. Atribūtu pievienošana</center></td>
+  </tr>
+</table>
+</center>
+
+<h3>2.4 Shēmas attēla izvadīšana</h3>
+<p>GSchem piedāvā arī izvadīt shēmas attēlu, kuru varēs apskatīties bez paša GSchem klātbūtnes. Lai to izdarītu programmas loga augšpusē uzpiedīsim uz file, kas atvērs izvelni. Šajā izvēlnē nospiedīsim <b>'print...'</b>. Tik atvērts lodziņš kurā tik piedāvādas dažādas attēla izvadīšanas opcijas. Mums tikai būs nepieciešams atlasīt, lai tiek izvadīts uz failu <b>'File:'</b> un nospiežot print, tiks izveidots fails ar shēmas attēlu.</p>
+
+<center>
+<table>
+  <tr>
+    <th><img src='https://github.com/sandemlis/RTR108/blob/master/P10_P11_LaTeX/pictures/spice/Print.PNG?raw=true' height=250 alt='Shēmas zīmēšanas vides logs'></th>
+    <th><img src='https://github.com/sandemlis/RTR108/blob/master/P10_P11_LaTeX/pictures/spice/PrintFile.PNG?raw=true' height=250 alt='Shēmas zīmēšanas vides logs'></th> 
+  </tr>
+  <tr>
+    <td><center>10. attēls. Attēla izvadīšana (Print)</center></td>
+    <td><center>11. attēls. Opcija, lai izvadītu uz failu
+</center></td>
+  </tr>
+</table>
+</center>
+
+<h2>3 Elementu-mezglu faila izveidošana (*.net)</h2>
+<p>Šis fails (saraksts) ir nepieciešams, lai mēs no izveidotās shēmas varētu veikt simulācijas, tas saturēs elementu vērtības un meglus pie kuriem šie elementi ir savienoti. Šīs darbības veikšanai izmantosim komandu <b>'gnetlist'</b> Tālāk tiks norādīts komandas pielietošanas piemērs, lai šo darbību varētu veikt:</p>
+
+<table width=100%>
+  <tr><td>1</td><td style="background-color:#F2F2EB">gnetlist -g spice -o [fails kur] [fails no kura]</td></tr>
+</table>
+
+<p><b>"[fails kur]"</b> norāda komandai failu, kurā tiks veikts elementu-mezglu saraksts \newline
+<b>"[fails no kura]"</b> norāda shēmas failu, no kura tiks veidots elementu-mezglu saraksts (parasti beidzas ar .net)</p>
+<p>Ja shēmā viss tika izdarīts pareizi, tad jauniegūtajā faila saturam jaizskatās līdzīgi šim.</p>
+
+<center><img src='https://github.com/sandemlis/RTR108/blob/master/P10_P11_LaTeX/pictures/spice/ElementuMezgluSaraksts.PNG?raw=true' width=350 alt='Shēmas zīmēšanas vides logs'><br><p>12. attēls. Elementu-Mezglu saraksts</p></center>
+
+<h2>4 Shēmas simulācijas veikšana</h2>
+<p>Lai veiktu shēmas simulāciju ir jāpalaiž NGSpice ierakstot <b>'ngspice'</b> konsolē Kad NGSpice ir palaists būs jāieraksta dažas komandas kuras tiks izmantotas, lai iegūtu simulācijas recultātus.</p>
+<p>Šīs komandas .āraksta ir šādā secībā, lai veiktu simulāciju</p>
+
+<table width=100%>
+  <tr><td>1</td><td style="background-color:#F2F2EB">source [fails] </td></tr>
+  <tr><td>2</td><td style="background-color:#F2F2EB">tran [solis] [beigas] [saakums]</td></tr>
+</table>
+
+<p>Komanda <b>'source'</b> norāda failu, kuram tiks veikta simulācija, šis fails jānorāda <b>"[fails]"</b> vietā. Šājā failā, kuru izmantos, lai veiktu simulāciju, ir jābūt mezlu-elementu sarakstam.<br>
+Komanda 'tran' veiks simulāciju laika posmā, <br><b>"[solis]"</b> norāda ik pēc cik ilga laika tiks veikta mērījumu fiksēšana, <br><b>["beigas"]</b> norāda beigu laiku, kad beigs veikt mērījumu piefiksēšanu, <br> un <b>["sākums"]</b> norāda laiku, kurā sākt veikt mērījumu piefiksēšanu 
+<br><br>
+Norādot laiku, ja netiek norādītas mērvienības, ievadītie cipari tiek uzskatīti kā sekundes, bet ja vēlas norādīt mērīšanas intervālu mazākā diapazonā, piemēram ja ir straujas izmaiņas, būs laiks jānorāda ar mērvienību, piemēram ms, us, utt.</p>
+
+<center><img src='https://github.com/sandemlis/RTR108/blob/master/P10_P11_LaTeX/pictures/spice/Simulacija.PNG?raw=true' width=350 alt='Shēmas zīmēšanas vides logs'><br><p>13. attēls. Simulācija
+</p></center>
+
+<p>Tālāk norādītās komandas tiek izmantotas, lai izvadītu veikto simulāciju grafikus.</p>
+
+<table width=100%>
+  <tr><td>1</td><td style="background-color:#F2F2EB">plot "[mezgls]"                     vai arii     plot "[mezgls1]" "[mezgls2]"</td></tr>
+  <tr><td>2</td><td style="background-color:#F2F2EB">hardcopy [fails kur] "[mezgls]"     vai arii     hardcopy [fails kur] "[mezgls1]" "[mezgls2]"</td></tr>
+</table>
+
+<p>Komanda plot parādīs uz ekrāna grafiku, bet komanda hardcopy grafiku izvadīs failā.</p>
+
+<center>
+<table>
+  <tr>
+    <th><img src='https://github.com/sandemlis/RTR108/blob/master/P10_P11_LaTeX/pictures/spice/PlotGrafiks.PNG?raw=true' height=250 alt='Shēmas zīmēšanas vides logs'></th>
+    <th><img src='https://github.com/sandemlis/RTR108/blob/master/P10_P11_LaTeX/pictures/spice/HardcopyGrafiks.PNG?raw=true' height=250 alt='Shēmas zīmēšanas vides logs'></th> 
+  </tr>
+  <tr>
+    <td><center>14. attēls. Plot izvadītais grafiks </center></td>
+    <td><center>15. attēls. Hardcopy izvadītais grafiks
+</center></td>
+  </tr>
+</table>
+</center>
+
+</body>
+</html>
