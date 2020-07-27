@@ -6,6 +6,7 @@ Piemēri CSS ielietojumiem šajā HTML failā.
 
 Inline:
 > style="background-color:#F2F2EB"
+
 (Tiek izmantots lai nomainītu tabulā klāsu, lai vieglāk pamanītu ierakstītās koda līnijas)
 
 Internal:
@@ -18,6 +19,7 @@ Internal:
 >         margin-right: auto;
 >     }
 >  </style>
+
 (Iestata lapai fiksētus izmērus, kā arī centrē to, lai tā izskatītos pēc A4 lapas)
 
 External:
