@@ -22,4 +22,5 @@ Internal:
 
 External:
 > < link rel="stylesheet" href="Voltade_devider.css">
+
 (norāda saiti uz ārējo kaskadēšanas stila failu - noderīgs, lai katrā lapā nebūtu jāvada iekšā kāds noteikts izkārtojuma formāts)
