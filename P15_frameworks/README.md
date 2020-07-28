@@ -20,7 +20,7 @@ Komanda framework palaišanai:
 
 Atribūts --open norāda lai palaistais projekts tiktu atvērts lokāli pārlūkprogrammā
 
-![Ģenerētā template izskats](./Pictures/LapasIzskats.png)
+![Ģenerētā template izskats](./Pictures/LapasIzskatas.png)
 
 Patinot lapu uz leju var redzēt ka tā piedāvā iztestēt to, cik ātra notiek tās darbība, to arī mēs izdarīsim
 
@@ -30,7 +30,7 @@ Patinot lapu uz leju var redzēt ka tā piedāvā iztestēt to, cik ātra notiek
 
 Izpildot šo komandu palaižas jauns pārlūkprogrammas logs, kurā ar "Karma" servisa palīdzību tiek iztestēta lapas ātrdarbība.
 
-![Testēšanas izskats](./Pictures/TesteshanaIzskats.png)
+![Testēšanas izskats](./Pictures/TesteshanasIzskatas.png)
 
 Lai rediģētu kodu Frameworkā un redzētu veiktās izmaiņas tiek izmantots "Visual Studio Code", ko mēs saucam par workspace, jeb darba vidi
 
