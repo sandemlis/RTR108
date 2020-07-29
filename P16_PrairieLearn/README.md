@@ -69,3 +69,5 @@ Kā arī, atbildot uz uzdevumu, var redzēt, ka tas strādā veiksmīgi un atbil
 ## Pirmais iespaids
 
 Pirmajā iespaidā šī vide mazliet atgādina Moodle vidi. Lai gan es iepriekš neesmu ar šādu vidi strādājis un veidojis uzdevumus, man tas lielas grūtības nesagādāja, jo pārskatot jau pieejamās tēmas, kas tiek izveidotas automātiski, var saprast, kā izveidot jaunu.
+
+Ļoti patīkami strādājot ar vidi bija tas ka jaunas tēmas izveidi var veikt caur pārlūkprogrammu un nebija nepieciešamība piekļūt failiem "serverī".
