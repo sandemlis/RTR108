@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatilbe" content="ie=edge" />
+    <title>Emils Vizulis gala darbs</title>
+    <link rel="icon" type="image/png" href="./favicon-96x96.png"> 
+    <!-- Ikona ņemta no https://previews.123rf.com/images/pxlprostudio/pxlprostudio1902/pxlprostudio190205385/124996279-electronic-circuit-icon-on-white-background-for-graphic-and-web-design-modern-simple-vector-sign-int.jpg -->
+    <style>
+      body  {
+        background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-031.jpg");
+        background-color: #bed4db;
+      }
+      .toolbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        background-image: url("https://s4isystems.com/wp-content/uploads/2014/11/header-background-9.jpg");
+        background-size: cover;
+        color: white;
+        font-weight: 600;
+      }
+      .content {
+        display: flex;
+        margin: 82px auto 32px;
+        padding: 0 16px;
+        max-width: 960px;
+        flex-direction: column;
+        align-items: center;
+      }
+      img {
+        border: 1px solid rgb(119, 119, 119);
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+      }
+      .imgWindow {
+        padding: 15px;
+      }
+      </style>
+  </head>
+  <body>
+    <script>
+      function voltDivRez() {
+      var varV1, varR1, varR2, varOutput;
+      varV1 = Number(document.getElementById("V1val").value);
+      varR1 = Number(document.getElementById("R1val").value);
+      varR2 = Number(document.getElementById("R2val").value);
+      varOutput = varV1*varR2/(varR1+varR2);
+      document.getElementById("rezval").innerHTML = (varOutput+' V');
+      }
+    </script>
+    <script>
+      async function voltDivRezSim() {
+        var valV1, valR1, valR2,
+        valV1 = Number(document.getElementById("V1val").value);
+        valR1 = Number(document.getElementById("R1val").value);
+        valR2 = Number(document.getElementById("R2val").value);
+
+        const data = { valV1, valR1, valR2 };
+          const options = {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          };
+          const response = await fetch('/voltsim', options);
+          const recData = await response.json();
+          console.log(recData);
+          document.getElementById("rezval").innerHTML = (recData.rezultats+' V');
+      }
+    </script>
+    <div class="toolbar" role="banner">
+      <span style="margin-left:auto; margin-right:auto; color: rgb(255, 225, 0);">Sprieguma dalītājs</span>
+    </div>
+    <div class="content">
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 50%; float:left;">
+          <div style="margin-left: 40%">
+            <div class="imgWindow">
+              <img src="./voltageDiv.png" style="scale: 1.1;" alt="Dividier circuit">
+            </div>    
+          </div>
+        </div>
+        <div style="margin-left: 55%; margin-right: 15%; text-align: center;">
+          <form>
+            <p>V1 - <input id="V1val" value=0></p>
+            <p>R1 - <input id="R1val" value=0></p>
+            <p>R2 - <input id="R2val" value=0></p>
+
+            <p style="display: inline-block;" >Spriegums starp rezistoriem: <br><output id="rezval">Rezultāts</output></p>
+          </form> 
+          <div>
+            <button type="button" onclick="voltDivRezSim()">Simulēt</button>
+            <button type="button" onclick="voltDivRez()">Aprēķināt</button>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>
